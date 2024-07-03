@@ -769,7 +769,7 @@ public class SkillTreeEditorScreen extends Screen {
     ResourceLocation id;
     int counter = 1;
     do {
-      id = new ResourceLocation("skilltree", "new_skill_" + counter++);
+      id = new ResourceLocation("mythologyunleashed", "new_skill_" + counter++);
     } while (SkillTreeClientData.getEditorSkill(id) != null);
     return id;
   }
@@ -1186,7 +1186,7 @@ public class SkillTreeEditorScreen extends Screen {
 
   private void renderOverlay(GuiGraphics graphics) {
     ResourceLocation texture =
-        new ResourceLocation("skilltree:textures/screen/skill_tree_overlay.png");
+        new ResourceLocation("mythologyunleashed:textures/screen/skill_tree_overlay.png");
     RenderSystem.enableBlend();
     graphics.blit(texture, 0, 0, 0, 0F, 0F, width, height, width, height);
     RenderSystem.disableBlend();
@@ -1195,7 +1195,7 @@ public class SkillTreeEditorScreen extends Screen {
   @Override
   public void renderBackground(GuiGraphics graphics) {
     ResourceLocation texture =
-        new ResourceLocation("skilltree:textures/screen/skill_tree_background.png");
+        new ResourceLocation("mythologyunleashed:textures/screen/skill_tree_background.png");
     graphics.pose().pushPose();
     graphics.pose().translate(scrollX / 3F, scrollY / 3F, 0);
     int size = SkillTreeScreen.BACKGROUND_SIZE;

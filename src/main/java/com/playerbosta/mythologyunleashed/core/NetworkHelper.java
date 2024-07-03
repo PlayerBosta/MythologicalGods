@@ -22,6 +22,8 @@ import daripher.skilltree.skill.bonus.multiplier.LivingMultiplier;
 import java.util.*;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
+
+import com.playerbosta.mythologyunleashed.skill.extra.event.SkillEventListener;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -352,7 +354,7 @@ public class NetworkHelper {
         PSTRegistries.ITEM_CONDITIONS.get().getValue(serializerId);
     return Objects.requireNonNull(serializer).deserialize(buf);
   }
-
+*/
   public static void writeEventListener(
       FriendlyByteBuf buf, @Nonnull SkillEventListener condition) {
     SkillEventListener.Serializer serializer = condition.getSerializer();
@@ -367,7 +369,7 @@ public class NetworkHelper {
         PSTRegistries.EVENT_LISTENERS.get().getValue(serializerId);
     return Objects.requireNonNull(serializer).deserialize(buf);
   }
-
+/*
   public static void writeEnchantmentCondition(
       FriendlyByteBuf buf, @Nonnull EnchantmentCondition condition) {
     EnchantmentCondition.Serializer serializer = condition.getSerializer();

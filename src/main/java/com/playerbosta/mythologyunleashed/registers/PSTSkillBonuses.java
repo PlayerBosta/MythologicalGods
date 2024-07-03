@@ -18,9 +18,10 @@ public class PSTSkillBonuses {
 
   public static final RegistryObject<SkillBonus.Serializer> ATTRIBUTE =
       REGISTRY.register("attribute", AttributeBonus.Serializer::new);
-  /*
+
   public static final RegistryObject<SkillBonus.Serializer> COMMAND =
       REGISTRY.register("command", CommandBonus.Serializer::new);
+  /*
   public static final RegistryObject<SkillBonus.Serializer> DAMAGE =
       REGISTRY.register("damage", DamageBonus.Serializer::new);
   public static final RegistryObject<SkillBonus.Serializer> CRIT_DAMAGE =

@@ -1,6 +1,8 @@
 package com.playerbosta.mythologyunleashed.client.widget;
 
 import java.util.function.Supplier;
+
+import com.playerbosta.mythologyunleashed.MythologyUnleashed;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
@@ -34,7 +36,7 @@ public class Button extends net.minecraft.client.gui.components.Button {
   }
 
   protected void renderBackground(@NotNull GuiGraphics graphics) {
-    ResourceLocation texture = new ResourceLocation("skilltree:textures/screen/widgets.png");
+    ResourceLocation texture = new ResourceLocation(MythologyUnleashed.MODID, "textures/screen/widgets.png");
     int v = getTextureVariant() * 14;
     graphics.blit(texture, getX(), getY(), 0, v, width / 2, height);
     graphics.blit(texture, getX() + width / 2, getY(), -width / 2, v, width / 2, height);
